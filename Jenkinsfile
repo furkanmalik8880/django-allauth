@@ -5,13 +5,13 @@ pipeline {
         stage("Code"){
             steps{
                 echo "Pulling The Code"
-                git url:"https://github.com/furkan6397/django-notes-app.git",branch: "main"
+                git url:"https://github.com/furkanmalik8880/django-allauth.git",branch: "main"
             }
         }
         stage("Build"){
             steps{
                 echo "Building The Code"
-                sh "docker build -t my-node-app ."
+                sh "docker build -t app ."
             }
         }
         stage("Push to Docker Hub"){
